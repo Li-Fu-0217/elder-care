@@ -1,0 +1,100 @@
+/* 用户前台 — 参考社区养老门户：柔和绿主色 + 暖橙点缀，适老化清晰可读 */
+.front-layout {
+  --care-green: #2f9b6a;
+  --care-green-dark: #247a53;
+  --care-green-soft: #e8f6ef;
+  --care-orange: #f08a24;
+  --care-orange-soft: #fff4e8;
+  --care-coral: #e85d4c;
+  --care-sky: #3b8fd9;
+  --care-ink: #1e2a24;
+  --care-muted: #5c6b63;
+  --care-line: #d7e5dc;
+  --care-paper: #f3f7f5;
+  --care-card: #ffffff;
+
+  --app-primary: var(--care-green);
+  --app-primary-light: #3cb37c;
+  --app-primary-dark: var(--care-green-dark);
+  --app-bg: var(--care-paper);
+  --app-card-bg: var(--care-card);
+  --app-text: var(--care-ink);
+  --app-text-secondary: var(--care-muted);
+  --app-border: var(--care-line);
+
+  --el-color-primary: #2f9b6a;
+  --el-color-primary-light-3: #5bb88a;
+  --el-color-primary-light-5: #8dceb0;
+  --el-color-primary-light-7: #bfe2d0;
+  --el-color-primary-light-8: #d7eee3;
+  --el-color-primary-light-9: #e8f6ef;
+  --el-color-primary-dark-2: #247a53;
+}
+
+.front-page {
+  animation: front-fade-in 0.4s ease-out both;
+}
+
+.front-shell {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.front-section-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--care-ink);
+  letter-spacing: 0.02em;
+}
+
+.front-section-desc {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: var(--care-muted);
+}
+
+@keyframes front-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .front-page {
+    animation: none;
+  }
+}
+
+/* 前台个人信息 / 修改密码等居中表单页 */
+.front-layout .page-container--center {
+  padding: 28px 20px 48px;
+}
+
+/* 前台表格：默认舒适行高，勿用 size="small" */
+.front-layout .el-table {
+  width: 100%;
+  font-size: 14px;
+}
+
+.front-layout .el-table .el-table__cell {
+  padding: 12px 0;
+  text-align: left !important;
+}
+
+.front-layout .el-table .el-table__header .el-table__cell {
+  padding: 13px 0;
+  text-align: left !important;
+}
+
+.front-layout .el-table .cell {
+  line-height: 1.5;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}

@@ -1,0 +1,226 @@
+.page-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* 个人信息、修改密码等表单页居中 */
+.page-container--center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 0 24px;
+  box-sizing: border-box;
+}
+
+.page-container--center > .content-card {
+  width: 100%;
+  max-width: 560px;
+}
+
+.page-header {
+  margin-bottom: 12px;
+}
+
+.page-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--app-text);
+  line-height: 1.3;
+}
+
+.page-header p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--app-text-secondary);
+}
+
+.content-card {
+  background: var(--app-card-bg);
+  border-radius: var(--app-radius-sm);
+  box-shadow: var(--app-shadow);
+  border: 1px solid var(--app-border);
+  padding: 16px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.card-head h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.card-head__meta {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--app-text-secondary);
+}
+
+.card-head__meta strong {
+  color: var(--app-text);
+  font-weight: 600;
+}
+
+.stat-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
+
+.stat-inline__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--app-text-secondary);
+  padding: 6px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid var(--app-border);
+}
+
+.stat-inline__item strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+/* 相邻按钮间距 10px（覆盖 Element Plus 默认 12px） */
+.el-button + .el-button {
+  margin-left: 10px;
+}
+
+/* flex 区域仅用 gap，避免 margin 与 gap 叠加成过大间距 */
+.toolbar-row,
+.el-dialog__footer,
+.el-message-box__btns,
+.action-cell {
+  gap: 10px;
+}
+
+.toolbar-row .el-button + .el-button,
+.el-dialog__footer .el-button + .el-button,
+.el-message-box__btns .el-button + .el-button,
+.action-cell .el-button + .el-button {
+  margin-left: 0;
+}
+
+.el-dialog__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.toolbar-row .search-input {
+  width: 240px;
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+/* 全站表格表头/内容默认左对齐（覆盖列上的 align=center） */
+.el-table th.el-table__cell,
+.el-table td.el-table__cell {
+  text-align: left !important;
+}
+
+.el-table .cell {
+  text-align: left !important;
+}
+
+/* 列表表格：默认舒适行高（勿用 size="small"）；宽度撑满内容区 */
+.content-card .el-table {
+  width: 100% !important;
+  font-size: 14px;
+}
+
+.content-card .el-table .el-table__cell {
+  padding: 10px 0;
+  text-align: left !important;
+}
+
+.content-card .el-table .cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+.content-card .el-table .el-table__header .el-table__cell {
+  padding: 11px 0;
+  text-align: left !important;
+}
+
+/* 只保留数据区最后一行底边，去掉表格/分页之间的多余横线 */
+.content-card .el-table .el-table__inner-wrapper::before,
+.content-card .el-table .el-table__border-bottom-patch {
+  display: none;
+}
+
+.content-card .el-table .el-table__body-wrapper {
+  flex: none;
+}
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 12px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-cell__avatar {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--app-primary-light), var(--app-primary-dark));
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.user-cell__name {
+  font-weight: 500;
+  color: var(--app-text);
+  font-size: 13px;
+}
+
+.user-cell__sub {
+  font-size: 12px;
+  color: var(--app-text-secondary);
+  margin-top: 1px;
+}
+
+.time-text {
+  font-size: 13px;
+  color: var(--app-text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
